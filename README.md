@@ -55,14 +55,16 @@ Then, open `http://127.0.0.1:5000/` in your browser.
 ## Screenshots
 
 ### Welcome Page  
-![Welcome Page](screenshots/welcomepage.png)  
+![Welcome Page](screenshots/welcomepage.png) 
+
+## Register Page
+ ![Register - Step 1](screenshots/registerpage.png)
+ 
 
 ### Homepage  
 ![Homepage - View 1](screenshots/homepage1.png)  
 ![Homepage - View 2](screenshots/homepage2.png) 
 
-## Register Page
- ![Register - Step 1](screenshots/registerpage.png)
 
 ### Word Recall Game  
 ![Word Recall - Step 1](screenshots/wordrecall1.png)  
