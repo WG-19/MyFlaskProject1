@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Number Sequence Game</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/numbersequence.css') }}"
+    />
+  </head>
+  <body>
+    <div class="game-container">
+      <h1>Number Sequence Game</h1>
+
+      <p>Observe the sequence and enter the next number:</p>
+
+      <div id="sequenceDisplay" aria-live="polite">
+        <h2>{{ sequence }}</h2>
+      </div>
+
+      <button id="startButton">Start Game</button>
+
+      <div id="inputSection" style="display: none">
+        <input type="number" id="userInput" placeholder="Enter the next number..." required />
+        <button id="submitAnswer">Submit</button>
+      </div>
+
+      <div id="feedback" style="display: none">
+        <p id="feedbackText"></p>
+      </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/numbersequence.js') }}"></script>
+  </body>
+</html>

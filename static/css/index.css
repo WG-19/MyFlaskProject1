@@ -1,0 +1,104 @@
+body {
+  background-color: #93c5fd; /* Light Blue */
+  color: #1e3a8a; /* Dark Blue */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.hero {
+  position: relative; /* Needed for positioning child elements */
+  color: white;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; /* Stack elements vertically */
+  padding: 20px; /* Add some padding for spacing */
+  height: 100vh; /* Full height */
+  overflow: hidden; /* Hide overflow to prevent scrollbar */
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/Dementia-Care-homepage-background.webp"); /* Correct path with forward slashes */
+  background-size: cover; /* Scale the image to cover the entire section */
+  background-position: center; /* Center the image in the section */
+  filter: blur(2px); /* Apply blur effect */
+  z-index: -1; /* Place behind the text */
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.363); /* Semi-transparent black overlay */
+  z-index: -1; /* Place above the background image but below the text */
+}
+
+.hero h1 {
+  position: absolute;
+  top: 0; /* Position at the top */
+  left: 0; /* Position at the left */
+  margin: 20px; /* Optional: Add some margin for spacing */
+  font-size: 30px;
+  color: #bbc6ca;
+}
+
+.hero p {
+  max-width: 800px; /* Limit the width of the text */
+  margin: 20px; /* Center the text container */
+  text-align: center; /* Align text to the left for better readability */
+  color: white;
+  font-size: 30px;
+  z-index: 1; /* Ensure text is above the background */
+  font-weight: bold;
+  font-style: italic;
+}
+
+.register-button {
+  background-color: #bbc6ca; /* Dark Blue */
+  color: black; /* White for contrast */
+  border: none;
+  padding: 15px 25px;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 20px; /* Space between the paragraph and the button */
+  text-align: center;
+}
+
+.register-button:hover {
+  background-color: #1e3a8a; /* Light Blue */
+  color: #bbc6ca; /* Dark Blue */
+  border: 1px solid #bbc6ca; /* Dark Blue */
+}
+
+.login-button {
+  position: absolute; /* Position it relative to the nearest positioned ancestor */
+  top: 20px; /* Distance from the top */
+  right: 20px; /* Distance from the right */
+  background-color: #bbc6ca; /* Dark Blue */
+  color: black; /* White for contrast */
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 25px;
+  z-index: 1; /* Ensure the button is above other elements */
+}
+
+.login-button:hover {
+  background-color: #1e3a8a; /* Light Blue */
+  color: #bbc6ca; /* Dark Blue */
+  border: 1px solid #bbc6ca; /* Dark Blue */
+}
+

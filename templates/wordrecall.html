@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Word Recall Game</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/wordrecall.css') }}"
+    />
+  </head>
+  <body>
+    <div class="game-container">
+      <h1>Word Recall Game</h1>
+
+      <p>Memorize these words and press Enter when you're ready to recall them:</p>
+
+      <div id="wordDisplay" aria-live="polite">
+        <!-- Words will be shown here -->
+      </div>
+
+      <button id="startButton">Start Game</button>
+
+      <div id="inputSection" style="display: none">
+        <input type="text" id="userInput" placeholder="Enter the words..." required />
+        <button id="submitAnswer">Submit</button>
+      </div>
+
+      <div id="feedback" style="display: none">
+        <p id="feedbackText"></p>
+      </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/wordrecall.js') }}"></script>
+  </body>
+</html>

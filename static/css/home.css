@@ -1,0 +1,114 @@
+/* Ensure the welcome section takes the full viewport height */
+.welcome-section {
+    position: relative;
+    height: 80vh; /* Adjust this value to control the height */
+    overflow: hidden;
+}
+
+/* Adjust the carousel item to cover the section */
+.carousel-item {
+    height: 100%;
+    position: relative; /* Ensure positioning context for the overlay */
+}
+
+/* Ensure the carousel images cover the area properly */
+.carousel-item img {
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the area without stretching */
+}
+
+/* Add a dullness effect to the carousel images */
+.carousel-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Adjust the alpha value for the dullness effect */
+    z-index: 1; /* Ensures the overlay is above the image but below the caption */
+    pointer-events: none; /* Ensure overlay does not interfere with interactions */
+}
+
+/* Center the carousel caption in the middle of the section */
+.carousel-caption {
+    position: absolute; /* Changed from relative to absolute */
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%); /* Center horizontally and move up */
+    text-align: center;
+    color: white; /* Ensure text is visible on dark overlay */
+    z-index: 2; /* Ensures the text is above the overlay */
+}
+
+/* Optional: Adjust the padding of the welcome message for better alignment */
+.carousel-caption h1 {
+    font-size: 3rem; /* Adjust font size as needed */
+    font-weight: bolder;
+}
+
+.carousel-caption p {
+    font-size: 1.25rem; /* Adjust font size as needed */
+    font-weight: bolder;
+}
+
+.carousel-caption a {
+    padding: 0.75rem 1.5rem; /* Adjust button padding if necessary */
+}
+
+/* Custom button styles */
+.custom-btn {
+    border-radius: 50px; /* Makes the button oval */
+    border: 2px solid #bbc6ca; /* Border color */
+    background-color: #ffffff; /* Background color */
+    color: #000000; /* Text color */
+    padding: 8px 35px; /* Adjust padding as needed */
+    transition: background-color 0.3s, border-color 0.3s; /* Smooth transition for hover effects */
+}
+
+.custom-btn:hover {
+    background-color: #1e3a8a; /* Hover background color */
+    border-color: #1e3a8a; /* Hover border color */
+    color: #ffffff; /* Hover text color */
+}
+
+/* Navbar styles */
+.navbar-nav {
+    margin-left: auto; /* Pushes the navbar items to the right */
+}
+
+.navbar-nav .nav-item {
+    margin-left: 10px; /* Space between buttons */
+}
+
+/* Footer styles */
+.footer {
+    background-color: #1e3a8a; /* Set footer background color */
+    padding: 20px 0;
+    color: #ffffff; /* Set footer text color */
+}
+
+.footer p {
+    margin: 0;
+    padding: 10px 0;
+}
+
+.footer a {
+    color: #bbc6ca; /* Set footer link color */
+    transition: color 0.3s;
+}
+
+.footer a:hover {
+    color: #ffffff; /* Set footer link hover color */
+}
+
+/* Style for overlay */
+.carousel-item::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
+}

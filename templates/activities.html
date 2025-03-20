@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Activities</title>
+    <!-- Link to Bootstrap CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Link to Custom CSS -->
+    <link
+    rel="stylesheet"
+    href="{{ url_for('static', filename='css/activities.css') }}"
+  />
+  </head>
+  <body>
+    <!-- Main Content Section -->
+    <div class="header-bar">
+      <h1>Complete each of the following tasks...</h1>
+    </div>
+    <div class="container text-center mt-5">
+      <a href="{{url_for('wordrecall') }}">
+        <button>Wordrecall</button>
+      </a>
+        <a href="{{url_for('numbersequence') }}">
+          <button>Numbersequence</button></a>
+        <a href="#" class="custom-btn">Reflection</a>
+      </div>
+    </div>
+
+    <!-- Link to Bootstrap JS -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

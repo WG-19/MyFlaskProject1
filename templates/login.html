@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="auto">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.122.0">
+    <title>My Project</title>
+    
+    <!-- Link to Bootstrap CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <!-- Link to Your Custom CSS -->
+    <link rel="stylesheet" href="login.css" />
+    
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .bd-mode-toggle {
+        z-index: 1500;
+      }
+
+      .bd-mode-toggle .dropdown-menu .active .bi {
+        display: block !important;
+      }
+    </style>
+  </head>
+  <body class="d-flex align-items-center py-4 bg-body-tertiary">
+    <!-- Additional content for the theme toggle and form -->
+    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+      <!-- SVG symbols here -->
+    </svg>
+
+    <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
+      <!-- Theme toggle button here -->
+    </div>
+
+    <main class="form-signin w-100 m-auto" style="max-width: 330px;">
+      <form>
+        <div class="d-flex justify-content-center">
+          <img class="mb-4" src="{{ url_for('static', filename='images/Logo.jpg') }}" alt="Logo" width="192" height="177">
+      </div>
+        <h1 class="h3 mb-3 fw-normal text-center">Please Login</h1>
+
+        <div class="form-floating">
+          <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+          <label for="floatingInput">Email address</label>
+        </div>
+
+        <div class="form-floating">
+          <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+          <label for="floatingPassword">Password</label>
+        </div>
+
+        <a href="{{url_for('home')}}"><button class="btn btn-primary w-100 py-2" type="button">Login</button></a>
+
+        <div class="text-center mt-3">
+          <a href="forgot_password.html" class="mb-0">Forgot password?</a>
+        </div>
+
+        <div class="text-center mt-3">
+          <p class="mb-0">Don't have an account? <a href="{{url_for('register')}}">Register</a></p>
+        </div>
+        
+        <p class="mt-5 mb-3 text-body-secondary">&copy; 2017–2024</p>
+      </form>
+    </main>
+    
+    <!-- Link to Bootstrap JS -->
+    <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+  </body>
+</html>

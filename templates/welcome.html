@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basic HTML Structure</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/index.css') }}">
+    <!-- Make sure this is the correct path to your CSS file -->
+  </head>
+  <body>
+    <section class="hero">
+      <a href="{{url_for('login') }}">
+        <button>Login</button>
+      </a>
+      <h1>MindfulMemorySupport</h1>
+      <p>
+        This platform is dedicated to supporting individuals with dementia.
+        Explore our features designed to enhance your daily life, provide
+        cognitive stimulation, and improve overall user experience. Our goal is
+        to offer a safe, supportive, and engaging environment for you and your
+        loved ones.
+      </p>
+      <a href="{{url_for('register') }}">
+      <button>Register</button>
+    </a>
+    </section>
+  </body>
+</html>

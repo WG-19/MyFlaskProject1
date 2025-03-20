@@ -1,0 +1,50 @@
+/* Activities Section Styling */
+.activities-section {
+  background-color: #f8f9fa; /* Light background for contrast */
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.header-bar {
+  background-color: #1e3a8a; /* Use the same hover background color */
+  padding: 15px;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.header-bar h1 {
+  color: white; /* Ensure contrast */
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+.activities-section h2 {
+  color: #1e3a8a; /* Heading color to match theme */
+  font-weight: bolder;
+}
+
+.custom-btn {
+  border-radius: 50px; /* Consistent oval shape */
+  border: 2px solid #bbc6ca;
+  background-color: #ffffff;
+  color: #000000;
+  padding: 12px 40px;
+  font-size: 1.5rem;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.custom-btn:hover {
+  background-color: #1e3a8a;
+  border-color: #1e3a8a;
+  color: #ffffff;
+}
+
+.footer {
+  background-color: #1e3a8a;
+  padding: 20px 0;
+  color: #ffffff;
+  text-align: center;
+}
